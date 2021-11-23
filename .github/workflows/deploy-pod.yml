@@ -1,7 +1,7 @@
 on: workflow_dispatch
 name: Deploy App
 jobs:
-  delete-cluster:
+  deploy-app:
     runs-on: ubuntu-latest
     steps:
 
