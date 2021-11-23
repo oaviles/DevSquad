@@ -1,0 +1,15 @@
+name: Delete AKS Cluster (WARNING...)
+
+on: workflow_dispatch
+jobs:
+  delete-cluster:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - name: Azure CLI Action
+  uses: Azure/cli@v1
+  with:
+    # Specify the script here
+    inlineScript: |
+      az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop
