@@ -4,11 +4,15 @@ jobs:
   delete-cluster:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - name: Azure CLI Action
-  uses: Azure/cli@v1
-  with:
-    # Specify the script here
-    inlineScript: |
-      az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop
+      uses: Azure/cli@v1
+      with:
+        azcliversion: 2.16.0
+        inlineScript: |
+          az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop
