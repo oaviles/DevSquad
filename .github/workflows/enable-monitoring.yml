@@ -1,0 +1,22 @@
+on: workflow_dispatch
+name: Enable Monitoring on AKS
+jobs:
+  enable-monitoring:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@main
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Enable Monitoring on AKS
+      uses: Azure/cli@v1
+      with:
+        inlineScript: |
+          az aks get-credentials --name AKSCluster-Demo --resource-group IaC_Workshop
+          az aks install-cli
+          WORKSPACE_ID=$(az resource show --resource-type Microsoft.OperationalInsights/workspaces --resource-group Monitoring_Zone --name MyLogA-Workspace --query "id" -o tsv)
+          az aks enable-addons --resource-group IaC_Workshop --name AKSClsuter-Demo --addons monitoring --workspace-resource-id $WORKSPACE_ID
