@@ -21,6 +21,5 @@ jobs:
           az aks install-cli
           kubectl delete ns guid --force
           kubectl create ns guid
-          kubectl version
           kubectl create -f https://raw.githubusercontent.com/oaviles/observability_lab/main/.github/workflows/deploy-pod.yml --validate=false
           
