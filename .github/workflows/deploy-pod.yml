@@ -21,4 +21,5 @@ jobs:
           az aks install-cli
           kubectl create ns guid
           kubectl get ns
+          kubectl create -f 
           

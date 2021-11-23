@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pod-guid
+  name: pod-guid
+  namespace: guid
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pod-guid
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pod-guid
+    spec:
+      containers:
+      - args:
+        - /bin/sh
+        - -c
+        - while true; do curl https://logsdemosmx.azurewebsites.net/api/jsfunc01?event=POD-$RANDOM; sleep 1; done
+        image: ibmcom/curl:4.2.0-build.2
+        name: upload-guid
+        resources:
+          requests:
+            memory: "10Mi"
+            cpu: "100m"
+          limits:
+            memory: "15Mi"
+            cpu: "125m"
