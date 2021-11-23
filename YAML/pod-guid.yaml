@@ -22,7 +22,7 @@ spec:
       - args:
         - /bin/sh
         - -c
-        - while true; do curl https://logsdemosmx.azurewebsites.net/api/jsfunc01?event=POD-$RANDOM; sleep 1; done
+        - while true; do curl https://logsdemosmx.azurewebsites.net/api/jsfunc01?event=DEMO-$RANDOM; sleep 1; done
         image: ibmcom/curl:4.2.0-build.2
         name: upload-guid
         resources:
