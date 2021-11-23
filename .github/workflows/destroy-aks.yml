@@ -16,5 +16,4 @@ jobs:
       uses: Azure/cli@v1
       with:
         inlineScript: |
-          az account show
-   #       az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop --yes
+          az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop --yes
