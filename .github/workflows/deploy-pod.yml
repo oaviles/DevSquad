@@ -21,5 +21,6 @@ jobs:
           az aks install-cli
           kubectl delete ns guid --force
           kubectl create ns guid
-          kubectl create -f https://raw.githubusercontent.com/oaviles/observability_lab/main/.github/workflows/deploy-pod.yml --validate=false
+          kubectl create deployment pod-guid --image=ibmcom/curl:4.2.0-build.2 -n guid -- /bin/sh '-c' 'while true; do curl https://logsdemosmx.azurewebsites.net/api/jsfunc01?event=DEMO-$RANDOM; sleep 1; done'
+    #      kubectl create -f https://raw.githubusercontent.com/oaviles/observability_lab/main/.github/workflows/deploy-pod.yml --validate=false
           
