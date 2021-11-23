@@ -21,5 +21,5 @@ jobs:
           az aks install-cli
           kubectl create ns guid
           kubectl get ns
-          kubectl create -f https://raw.githubusercontent.com/oaviles/observability_lab/main/.github/workflows/deploy-pod.yml
+   #       kubectl create -f https://raw.githubusercontent.com/oaviles/observability_lab/main/.github/workflows/deploy-pod.yml
           
