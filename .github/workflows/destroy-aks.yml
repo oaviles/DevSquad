@@ -5,12 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+    - uses: actions/checkout@main
+
     - name: Azure Login
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
-    - name: Azure CLI Action
+    - name: Delete AKS Cluster with AZ CLI
       uses: Azure/cli@v1
       with:
         azcliversion: 2.16.0
