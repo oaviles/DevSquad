@@ -17,6 +17,5 @@ jobs:
       with:
         inlineScript: |
           az aks get-credentials --name AKSCluster-Demo --resource-group IaC_Workshop
-          az aks list
           az aks install-cli
           kubectl scale deployment pod-guid -n guid --replicas=1 

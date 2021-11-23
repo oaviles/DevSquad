@@ -17,7 +17,6 @@ jobs:
       with:
         inlineScript: |
           az aks get-credentials --name AKSCluster-Demo --resource-group IaC_Workshop
-          az aks list
           az aks install-cli
           kubectl delete ns guid --force
           kubectl create ns guid
