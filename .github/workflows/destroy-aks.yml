@@ -15,6 +15,5 @@ jobs:
     - name: Delete AKS Cluster with AZ CLI
       uses: Azure/cli@v1
       with:
-        azcliversion: 2.16.0
         inlineScript: |
           az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop --yes
