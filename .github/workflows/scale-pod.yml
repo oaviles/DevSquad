@@ -19,4 +19,4 @@ jobs:
           az aks get-credentials --name AKSCluster-Demo --resource-group IaC_Workshop
           az aks list
           az aks install-cli
-          kubectl scale deployment pod-guid -n pod-guid --replicas=100 
+          kubectl scale deployment pod-guid -n guid --replicas=100 
