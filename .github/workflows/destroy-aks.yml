@@ -17,4 +17,4 @@ jobs:
       with:
         azcliversion: 2.16.0
         inlineScript: |
-          az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop
+          az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop --yes --no-wait
