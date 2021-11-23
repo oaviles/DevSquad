@@ -1,0 +1,24 @@
+on: workflow_dispatch
+name: Deploy App
+jobs:
+  delete-cluster:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@main
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Delete AKS Cluster with AZ CLI
+      uses: Azure/cli@v1
+      with:
+        inlineScript: |
+          az aks get-credentials --name AKSCluster-Demo --resource-group IaC_Workshop
+          az aks list
+          az aks install-cli
+          kubectl create ns guid
+          kubectl get ns
+          
