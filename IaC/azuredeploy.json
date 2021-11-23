@@ -83,7 +83,10 @@
                         "osType": "[parameters('osType')]",
                         "storageProfile": "ManagedDisks",
                         "type": "VirtualMachineScaleSets",
-                        "mode": "System"
+                        "mode": "System",
+                        "enableAutoScaling": true,
+                        "maxCount": 10,
+                        "minCount": 2
                     }
                 ]
             }
