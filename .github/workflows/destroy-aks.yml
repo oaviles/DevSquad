@@ -1,6 +1,5 @@
-name: Delete AKS Cluster (WARNING...)
-
 on: workflow_dispatch
+name: Delete AKS Cluster
 jobs:
   delete-cluster:
     runs-on: ubuntu-latest
