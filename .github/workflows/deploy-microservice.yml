@@ -16,4 +16,5 @@ jobs:
     - uses: Azure/k8s-deploy@v1.4
       with:
         manifests: |
+          YAML/create-ns.yaml
           YAML/pod-guid.yaml
