@@ -1,5 +1,5 @@
 on: [workflow_dispatch]
-
+name: Deploy Microservice
 jobs:
   build:
     runs-on: ubuntu-latest
