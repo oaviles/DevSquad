@@ -16,4 +16,4 @@ jobs:
       uses: Azure/cli@v1
       with:
         inlineScript: |
-          az aks delete --name AKSCluster-Demo --resource-group IaC_Workshop --yes
+          az aks delete --name ${{ secrets.CLUSTER_NAME }} --resource-group ${{ secrets.AZURE_RG }} --yes
