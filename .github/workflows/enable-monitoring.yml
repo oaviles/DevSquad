@@ -16,7 +16,7 @@ jobs:
       uses: Azure/cli@v1
       with:
         inlineScript: |
-          az aks get-credentials --name AKSCluster-Demo --resource-group IaC_Workshop
+          az aks get-credentials --name ${{ secrets.CLUSTER_NAME }} --resource-group ${{ secrets.AZURE_RG }}
           az aks install-cli
           WORKSPACE_ID=$(az resource show --resource-type Microsoft.OperationalInsights/workspaces --resource-group Monitoring_Zone --name MyLogA-Workspace --query "id" -o tsv)
-          az aks enable-addons --resource-group IaC_Workshop --name AKSCluster-Demo --addons monitoring --workspace-resource-id $WORKSPACE_ID
+          az aks enable-addons --resource-group ${{ secrets.AZURE_RG }} --name ${{ secrets.CLUSTER_NAME }} --addons monitoring --workspace-resource-id $WORKSPACE_ID
