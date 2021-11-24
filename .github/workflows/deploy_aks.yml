@@ -1,7 +1,7 @@
 on: workflow_dispatch
-name: ARM-Template Deploying AKS
+name: Deploy AKS
 jobs:
-  arm-template-deploy-aks:
+  deploy-aks:
     runs-on: ubuntu-latest
     steps:
 
@@ -14,7 +14,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       # Deploy ARM template
-    - name: Run ARM deploy
+    - name: Deploy AKS
       uses: azure/arm-deploy@v1
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
