@@ -1,0 +1,26 @@
+on: workflow_dispatch
+jobs:
+  deploy-microservice:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      
+    - uses: azure/k8s-set-context@v1
+      with:
+         kubeconfig: ${{ secrets.aks_kubeConfig }}
+      id: login
+    
+    - name: Create namespace
+      run: |
+        namespacePresent=`kubectl get namespace | grep guid | wc -l`
+        if [ $namespacePresent -eq 0 ]
+        then
+            echo `kubectl create namespace guid`
+        fi     
+    - uses: azure/k8s-deploy@v1.2
+      with:
+        namespace: guid
+        manifests: |
+          YAML/pod-guid.yaml
+        images: |
+          ibmcom/curl:4.2.0-build.2
