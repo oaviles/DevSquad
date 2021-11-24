@@ -13,11 +13,9 @@ jobs:
     
     - name: Create namespace
       run: |
-        namespacePresent=`kubectl get namespace | grep guid | wc -l`
-        if [ $namespacePresent -eq 0 ]
-        then
-            echo `kubectl create namespace guid`
-        fi     
+        kubectl delete nd guid --force
+        kubectl create namespace guid
+        
     - uses: azure/k8s-deploy@v1.2
       with:
         namespace: guid
