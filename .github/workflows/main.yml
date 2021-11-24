@@ -1,0 +1,19 @@
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      
+    # Set the target AKS cluster.
+    - uses: Azure/aks-set-context@v1
+      with:
+        creds: '${{ secrets.AZURE_CREDENTIALS }}'
+        cluster-name: ${{ secrets.CLUSTER_NAME }}
+        resource-group: ${{ secrets.AZURE_RG }}
+
+    - uses: Azure/k8s-deploy@v1.4
+      with:
+        manifests: |
+          YAML/pod-guid.yaml
