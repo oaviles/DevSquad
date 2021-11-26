@@ -26,13 +26,6 @@ spec:
         name: notes-app
         ports:
         - containerPort: 3000
-        resources:
-          requests:
-            memory: "10Mi"
-            cpu: "100m"
-          limits:
-            memory: "15Mi"
-            cpu: "125m"
 ---
 apiVersion: v1
 kind: Service
