@@ -1,0 +1,26 @@
+on: [workflow_dispatch]
+name: Deploy Web App Notes
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - uses: azure/docker-login@v1
+      with:
+        login-server: acraksworkshop.azurecr.io
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PWD }}
+      
+    # Set the target AKS cluster.
+    - uses: Azure/aks-set-context@v1
+      with:
+        creds: '${{ secrets.AZURE_CREDENTIALS }}'
+        cluster-name: ${{ secrets.CLUSTER_NAME }}
+        resource-group: ${{ secrets.AZURE_RG }}
+
+    - uses: Azure/k8s-deploy@v1.4
+      with:
+        namespace: 'notes'
+        manifests: |
+          YAML/deploy-notes-app.yml
