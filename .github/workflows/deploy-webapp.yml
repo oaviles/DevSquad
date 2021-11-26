@@ -6,11 +6,11 @@ jobs:
     steps:
     - uses: actions/checkout@master
     
-    - uses: azure/docker-login@v1
-      with:
-        login-server: acraksworkshop.azurecr.io
-        username: ${{ secrets.ACR_USERNAME }}
-        password: ${{ secrets.ACR_PWD }}
+#    - uses: azure/docker-login@v1
+#      with:
+#        login-server: acraksworkshop.azurecr.io
+#        username: ${{ secrets.ACR_USERNAME }}
+#        password: ${{ secrets.ACR_PWD }}
       
     # Set the target AKS cluster.
     - uses: Azure/aks-set-context@v1
