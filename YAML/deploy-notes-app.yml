@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: notes
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: notes-app
+  name: notes-app
+  namespace: notes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notes-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: notes-app
+    spec:
+      containers:
+      - image: acraksworkshop.azurecr.io/knote-js
+        name: notes-app
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "10Mi"
+            cpu: "100m"
+          limits:
+            memory: "15Mi"
+            cpu: "125m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: notes-app
+    namespace: notes
+    labels:
+        app: notes-app
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
+      name: http
+    selector:
+        app: notes-app
