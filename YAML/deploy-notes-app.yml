@@ -27,6 +27,13 @@ spec:
               key: MONGOCONNECTION
         ports:
         - containerPort: 3000
+        resources:
+          requests:
+            memory: "40Mi"
+            cpu: "10m"
+          limits:
+            memory: "50Mi"
+            cpu: "15m"
 ---
 apiVersion: v1
 kind: Service
