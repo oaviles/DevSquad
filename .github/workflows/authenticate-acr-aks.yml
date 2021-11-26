@@ -16,4 +16,4 @@ jobs:
       uses: Azure/cli@v1
       with:
         inlineScript: |
-          az aks update -n ${{ secrets.CLUSTER_NAME }} -g --resource-group ${{ secrets.AZURE_RG }} --attach-acr ${{ secrets.ACR_NAME }}
+          az aks update -n ${{ secrets.CLUSTER_NAME }} -g ${{ secrets.AZURE_RG }} --attach-acr ${{ secrets.ACR_NAME }}
