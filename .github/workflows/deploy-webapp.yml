@@ -23,4 +23,4 @@ jobs:
       with:
         namespace: 'notes'
         manifests: |
-          YAML/deploy-notes-app.yml
+          YAML/deploy-notes-app.yaml
