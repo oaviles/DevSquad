@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "acrName": {
+      "value": "acrname"
+    },
+    "acrAdminUserEnabled": {
+      "value": false
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "staticWebSiteN":{
+        "value": "swsdemo"
+    },
+    "serviceBusNamespaceName": {
+    "value": "demosbq"
+      },
+      "siteNameF": {
+    "value": "demosf"
+      },
+      "dbName":{
+          "value": "demo"
+      },
+      "storageAccountNameF": {
+          "value": "demostorageaccount"
+      },
+    "clusterName": {
+        "value": "AKSCluster-IaC"
+      },
+      "dnsPrefix": {
+        "value": "aksclusteriac"
+      },
+      "linuxAdminUsername": {
+        "value": "<usernameAdmin>"
+      },
+      "sshRSAPublicKey": {
+        "value": "<your-ssh-rsa_key AAAAB3N......>"
+      },
+    "environment": {
+      "value": "dev"
+    },
+    "administratorLogin": {
+      "value": "<usernameAdmin>"
+    },
+    "administratorLoginPassword": {
+      "value": "<userpwdAdmin>"
+    },
+    "databaseSkuCapacity": {
+      "value": 2
+    },
+    "databaseSkuName": {
+      "value": "GP_Gen5_2"
+    },
+    "databaseSkuSizeMB": {
+      "value": 51200
+    },
+    "databaseSkuTier": {
+      "value": "GeneralPurpose"
+    },
+    "postgresqlVersion": {
+      "value": "9.6"
+    },
+    "databaseskuFamily": {
+      "value": "Gen5"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksclusterdemo-1abe"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksclusterdemo-1abe"
+  template:
+    metadata:
+      labels:
+        app: "aksclusterdemo-1abe"
+    spec:
+      containers:
+        - name: "aksclusterdemo-1abe"
+          image: "acraksworkshop.azurecr.io/aksclusterdemo"
+          ports:
+          - containerPort: 3000

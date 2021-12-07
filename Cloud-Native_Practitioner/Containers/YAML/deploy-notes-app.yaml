@@ -17,7 +17,7 @@ spec:
         app: notes-app
     spec:
       containers:
-      - image: acraksworkshop.azurecr.io/knote-js
+      - image: <acrname>.azurecr.io/<your-repository>
         name: notes-app
         env:
         - name: MONGO_URL

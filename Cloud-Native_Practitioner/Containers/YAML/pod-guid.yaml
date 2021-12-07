@@ -1,33 +1,28 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: serverless
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: call-function
-  name: call-function
-  namespace: serverless
+    app: pod-guid
+  name: pod-guid
+  namespace: guid
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: call-function
+      app: pod-guid
   strategy: {}
   template:
     metadata:
       labels:
-        app: call-function
+        app: pod-guid
     spec:
       containers:
       - args:
         - /bin/sh
         - -c
-        - while true; do curl https://ohch1mx.azurewebsites.net/api/ohappchallenge1?productId=DEMO-$RANDOM; sleep 1; done
+        - while true; do curl https://<your-azurefunction-service>.azurewebsites.net/api/<your-azurefuntion>?event=DEMO-$RANDOM; sleep 1; done
         image: ibmcom/curl:4.2.0-build.2
-        name: call-function
+        name: upload-guid
         resources:
           requests:
             memory: "10Mi"

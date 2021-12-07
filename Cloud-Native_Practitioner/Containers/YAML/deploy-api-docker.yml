@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: api
+  name: api
+  namespace: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: api
+        image: oaviles/api # IMPORTANT: update with your own repository
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000 # the application listens to this port
+        env:
+        - name: MONGODB_URI # the application expects to find the MongoDB connection details in this environment variable
+          valueFrom:
+            secretKeyRef:
+              name: mongosecret # the name of the Kubernetes secret containing the data
+              key: MONGOCONNECTION # the key inside the Kubernetes secret containing the data
+        resources:
+          requests: # minimum resources required
+            cpu: 250m
+            memory: 64Mi
+          limits: # maximum resources allocated
+            cpu: 500m
+            memory: 256Mi
