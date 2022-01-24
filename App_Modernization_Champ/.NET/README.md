@@ -1,3 +1,10 @@
+# .NET Application Reference Architecture 
+
+In this workshop, you will deploy a [.NET App reference arquitecture](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/net-app-modernization)
+
+![](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/media/net-app-modernization.png)
+
+
 ---
 topic: ASP.NET and SQL Database sample for Azure App Service
 languages:
