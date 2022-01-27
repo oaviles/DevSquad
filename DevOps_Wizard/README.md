@@ -4,7 +4,7 @@ In this workshop, you will deploy a [DevOps reference arquitecture](https://docs
 
 ![](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/media/devsecops-in-github-data-flow.png)
 
-Aditional resources to complemenet this content:
+Additional resources to complement this content:
 
 - [Introduction to GitHub](https://lab.github.com/githubtraining/introduction-to-github)
 - [DevOps with GitHub Actions](https://lab.github.com/githubtraining/devops-with-github-actions)
