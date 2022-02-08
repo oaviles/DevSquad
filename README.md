@@ -8,6 +8,11 @@ DevSecOps in Azure, reference architecture:
 
 All the content is develeoped based on [Azure Well Architecture Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/) best practices.
 
+### Check More DevSquad Projects
+* [DevSquad Serverless](https://github.com/oaviles/hello_serverless)
+* [DevSquad Sping Cloud](https://github.com/oaviles/hello_springcloud)
+* [DevSquad Kubernetes](https://github.com/oaviles/webapi)
+
 ## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
