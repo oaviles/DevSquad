@@ -11,7 +11,7 @@ All the content is develeoped based on [Azure Well Architecture Framework](https
 ### Check More DevSquad Projects
 * [DevSquad Serverless](https://github.com/oaviles/hello_serverless)
 * [DevSquad Sping Cloud](https://github.com/oaviles/hello_springcloud)
-* [DevSquad Kubernetes](https://github.com/oaviles/webapi)
+* [DevSquad Kubernetes](https://github.com/oaviles/hello_cloud-native)
 
 ## Contributing
 
