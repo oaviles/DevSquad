@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "deploymentName": {
+            "type": "string",
+            "metadata": {
+                "description": "IoT DevSquad deployment name"
+            },
+            "minLength":3,
+            "maxLength":24
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Devices/ProvisioningServices",
+            "apiVersion": "2020-03-01",
+            "name": "[parameters('deploymentName')]",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "S1",
+                "tier": "Standard",
+                "capacity": 1
+            },
+            "properties": {}
+        }
+    ],
+    "outputs": {}
+}

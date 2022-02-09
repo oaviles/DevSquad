@@ -1,0 +1,24 @@
+on: workflow_dispatch
+name: Deploy Storage Service
+jobs:
+  arm-template-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Deploy ARM template
+    - name: Run ARM Template
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ secrets.RESOURCE_GROUP_NAME }}
+        template: ./IaC/azuredeploy-storage.json
+        # parameters: workflows_name=oalogicapplab0
+        parameters: ./IaC/azuredeploy-storage.parameters

@@ -1,0 +1,24 @@
+on: workflow_dispatch
+name: Deploy DPS Service
+jobs:
+  arm-template-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Deploy ARM template
+    - name: Run ARM deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ secrets.RESOURCE_GROUP_NAME }}
+        template: ./IaC/azuredeploy-dps.json
+        # parameters: storageAccounts_name=oamx
+        parameters: ./IaC/azuredeploy-dps.parameters.json

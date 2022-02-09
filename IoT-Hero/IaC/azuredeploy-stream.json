@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "deploymentName": {
+            "type": "string",
+            "metadata": {
+                "description": "IoT DevSquad deployment name"
+            },
+            "minLength":3,
+            "maxLength":24
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [        
+        {
+            "type": "Microsoft.StreamAnalytics/StreamingJobs",
+            "apiVersion": "2017-04-01-preview",
+            "name": "[parameters('deploymentName')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "sku": {
+                    "name": "standard"
+                },
+                "outputErrorPolicy": "stop",
+                "eventsOutOfOrderPolicy": "adjust",
+                "eventsOutOfOrderMaxDelayInSeconds": 0,
+                "eventsLateArrivalMaxDelayInSeconds": 5,
+                "contentStoragePolicy": "SystemAccount",
+                "jobType": "Cloud",
+                "dataLocale": "en-US"
+            }
+        }
+    ],
+    "outputs": {}
+}
