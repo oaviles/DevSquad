@@ -9,9 +9,12 @@ DevSecOps in Azure, reference architecture:
 All the content is develeoped based on [Azure Well Architecture Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/) best practices.
 
 ### Check More DevSquad Projects
+
+* [DevSquad Main Project](https://github.com/microsoft/fast-prototyping)
 * [DevSquad Serverless](https://github.com/oaviles/hello_serverless)
 * [DevSquad Sping Cloud](https://github.com/oaviles/hello_springcloud)
 * [DevSquad Kubernetes](https://github.com/oaviles/hello_cloud-native)
+* [DevSquad IoT](https://github.com/luisruval/DevSquad-IoT)
 
 ## Contributing
 
