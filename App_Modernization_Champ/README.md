@@ -1,7 +1,7 @@
 # DevSquad Migration Samples
 ## Abstracts
 
-This is a migration guide with two implementaion references, this samples apply the best practices about: 
+This is a migration guide with two implementaion references, these samples apply the best practices about: 
 - [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/azure-migration-guide/?tabs=MigrationTools) 
 - [Software Engineering](https://github.com/microsoft/code-with-engineering-playbook/blob/main/docs/ENG-FUNDAMENTALS-CHECKLIST.md)
 - [Secure DevOps Practices](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github). 
