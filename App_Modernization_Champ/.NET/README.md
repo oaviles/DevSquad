@@ -14,13 +14,17 @@ products:
   - Azure Web Apps
 ---
 
-# Project Reference
+# Project References
 [How to migrate .NET App to Azure](https://github.com/oaviles/migrate-aspnetapp)
 
-# ASP.NET and SQL Database sample for Azure App Service
+## ASP.NET and SQL Database sample for Azure App Service
 
 This is a sample application that you can use to follow along with the tutorial at 
 [Create an ASP.NET app in Azure with SQL Database](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-tutorial-dotnet-sqldatabase/). 
+
+## PartsUnlimited Project Samples:
+- [PartsUnlimited GitHub Edition](https://github.com/oaviles/PartsUnlimitedGitHub)
+- [PartsUnlimited DevOps Edition ](https://github.com/Microsoft/PartsUnlimited)
 
 ## License
 
