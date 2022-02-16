@@ -4,8 +4,12 @@ In this workshop, you will deploy a [Java App reference arquitecture](https://do
 
 ![](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/media/java-cicd-using-jenkins-and-azure-web-apps.png)
 
-### Check More DevSquad Projects
+## Cloud Adoption Framework
+[Migrate Java applications to Azure](https://docs.microsoft.com/en-us/azure/developer/java/migration/migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+
+## Check More DevSquad Projects
 * [DevSquad Azure Spring Cloud Project](https://github.com/oaviles/hello_springcloud)
+* [DevSquad Fast Prototyping](https://github.com/microsoft/fast-prototyping)
 
 ## Contributing
 
