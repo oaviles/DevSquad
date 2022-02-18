@@ -1,4 +1,4 @@
-# DevSquad Workshops
+# DevSquad Implementation References
 ## Abstracts
 ### Workshop
 In these workshops, you will deploy Cloud-Native reference arquitectures, for understanding best practices of [Software Engineering](https://github.com/microsoft/code-with-engineering-playbook/blob/main/docs/ENG-FUNDAMENTALS-CHECKLIST.md) and [Secure DevOps Practices](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github). 
