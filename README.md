@@ -17,6 +17,9 @@ All the content is develeoped based on [Azure Well Architecture Framework](https
 * [DevSquad Kubernetes Project](https://github.com/oaviles/hello_cloud-native)
 * [DevSquad IoT Project](https://github.com/luisruval/DevSquad-IoT)
 
+#### Additional Resources:
+- [The Well-Architected Training for partners](https://github.com/microsoft/GPS-Well-Architected-Partner-Training)
+
 ## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
