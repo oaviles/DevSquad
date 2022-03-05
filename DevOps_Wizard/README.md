@@ -16,6 +16,7 @@ Additional resources to complement this content:
 ### Check More DevSquad Projects
 * [DevSquad Main Project](https://github.com/microsoft/fast-prototyping)
 * [DevSquad App Service Project](https://github.com/oaviles/hello_appservice)
+* [DevSquad GitHub Workflows Lab](https://github.com/oaviles/hello_workflows)
 
 ## Contributing
 
