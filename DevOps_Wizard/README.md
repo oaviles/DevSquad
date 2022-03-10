@@ -1,6 +1,8 @@
 # DevOps Reference Architecture 
 
-In this workshop, you will deploy a [DevOps reference arquitecture](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github)
+In these reference implementations, you will deploy Cloud-Native reference arquitectures, for understanding best practices of [Software Engineering](https://github.com/microsoft/code-with-engineering-playbook/blob/main/docs/ENG-FUNDAMENTALS-CHECKLIST.md) and [Secure DevOps Practices](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github). 
+
+You will deploy a [DevOps reference arquitecture](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github)
 
 ![](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/media/devsecops-in-github-data-flow.png)
 
