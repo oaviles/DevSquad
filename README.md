@@ -11,6 +11,7 @@ All the content is develeoped based on [Azure Well Architecture Framework](https
 ### Check More DevSquad Projects
 
 * [DevSquad Main Project](https://github.com/microsoft/fast-prototyping)
+* [DevSquad IaC Project](https://github.com/oaviles/hello_iac)
 * [DevSquad App Service Project](https://github.com/oaviles/hello_appservice)
 * [DevSquad Serverless Project](https://github.com/oaviles/hello_serverless)
 * [DevSquad Sping Cloud Project](https://github.com/oaviles/hello_springcloud)
