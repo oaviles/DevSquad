@@ -10,12 +10,13 @@ All the content is develeoped based on [Azure Well Architecture Framework](https
 
 ### Check More DevSquad Projects
 
-* [DevSquad Main Project](https://github.com/microsoft/fast-prototyping)
+* [DevSquad Main Project](https://github.com/microsoft/devsquad-accelerators)
 * [DevSquad IaC Project](https://github.com/oaviles/hello_iac)
 * [DevSquad App Service Project](https://github.com/oaviles/hello_appservice)
 * [DevSquad Serverless Project](https://github.com/oaviles/hello_serverless)
 * [DevSquad Sping Cloud Project](https://github.com/oaviles/hello_springcloud)
 * [DevSquad Kubernetes Project](https://github.com/oaviles/hello_cloud-native)
+* [DevAquad Azure Batch Project](https://github.com/oaviles/hello_batch)
 * [DevSquad IoT Project](https://github.com/luisruval/DevSquad-IoT)
 
 #### Additional Resources:
